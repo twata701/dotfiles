@@ -1,5 +1,3 @@
-ulimit -n 9480
-
 # 環境変数
 export LANG=ja_JP.UTF-8
 export MAVEN_HOME=/Users/wataru.takahashi/Work/mng/apache-maven-2.2.1
