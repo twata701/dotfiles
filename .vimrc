@@ -197,4 +197,7 @@ imap <C-p>  <UP>
 imap <ESC>< <ESC>ggi
 imap <ESC>> <ESC>Gi
 
+" macとclipbordの連携
+set clipboard+=unnamed
+
 
