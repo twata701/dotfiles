@@ -29,6 +29,9 @@ NeoBundle 'tpope/vim-rails'
 " Ruby向けにendを自動挿入してくれる
 NeoBundle 'tpope/vim-endwise'
 
+" Silver Seacher
+NeoBundle 'rking/ag.vim'
+
 call neobundle#end()
 
 " Required:
@@ -79,7 +82,7 @@ set hidden
 " 不可視文字を表示する
 set list
 " タブと行の続きを可視化する
-set listchars=tab:>\ ,extends:<
+set listchars=tab:>.,trail:_,eol:↲,extends:>,precedes:<,nbsp:%
 " 行番号を表示する
 set number
 " 対応する括弧やブレースを表示する
@@ -176,7 +179,7 @@ endfunction
 " NERD Treeの設定
 """"""""""""""""""""""""""""""
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
-
+let NERDTreeShowHidden=1
 """""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""
@@ -200,4 +203,10 @@ imap <ESC>> <ESC>Gi
 " macとclipbordの連携
 set clipboard+=unnamed
 
+set backspace=indent,eol,start
 
+if expand("%:t") =~ ".*\.php"
+  set noexpandtab
+  set tabstop=4
+  set shiftwidth=4
+endif
