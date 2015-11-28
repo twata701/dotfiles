@@ -3,6 +3,8 @@ export LANG=ja_JP.UTF-8
 export MAVEN_HOME=/Users/wataru.takahashi/Work/mng/apache-maven-2.2.1
 export TOMCAT_HOME=/Users/wataru.takahashi/Work/mng/apache-tomcat-6.0.26
 export PATH=$PATH:$MAVEN_HOME/bin
+
+export PATH="$HOME/.rbenv/bin:$PATH" 
 eval "$(rbenv init - zsh)"
 
 # 色を使用出来るようにする
@@ -162,7 +164,4 @@ function peco-select-history() {
 }
 zle -N peco-select-history
 bindkey '^r' peco-select-history
-
-alias ll='ls -al | peco'
-alias pp='ps aux | peco'
 
